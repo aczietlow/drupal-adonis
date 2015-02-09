@@ -54,3 +54,13 @@ The project build is made explicit inside `build/drush-build.sh`. To rebuild, ju
 ------------------
 
 Most days, when you leave, running `vagrant halt` will suffice.
+
+##Troubleshooting
+
+------------------
+
+* If on `vagrant up` NFS mounting just hangs, halt the process, remove `exports` (`rm /etc/exports`), and run `vagrant up` again.
+* If you get the error `Command: ["hostonlyif", "create"]`, you need to restart VirtualBox.
+
+`````````````````
+sudo /Library/Application\ Support/VirtualBox/LaunchDaemons/VirtualBoxStartup.sh restart
